@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Now | Shasha's Ilocos Empanada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="about-page">
+
+<header class="navbar navbar-overlay">
+  <div class="logo">
+    <img src="images/logo.png" alt="Shasha's Empanada Logo">
+  </div>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="order-banner">
+  <div class="order-banner-content">
+    <h1>Place Your Order</h1>
+    <p>Freshly cooked. Made with love. Just for you.</p>
+  </div>
+</section>
+
+<section class="order-section">
+  <form class="order-form" id="orderForm">
+
+    <!-- ORDER TYPE -->
+    <div class="order-box">
+      <h3>Order Type</h3>
+      <select id="orderType" required>
+        <option value="" selected disabled>Choose order type</option>
+        <option value="pickup">Pick Up</option>
+        <option value="delivery">For Delivery (+ ₱10)</option>
+      </select>
+    </div>
+
+    <!-- EMPANADAS -->
+    <div class="order-box" id="empanadaBox">
+      <h3>Empanadas</h3>
+
+      <div class="order-row empanada-row">
+        <select class="empanada-select" required>
+          <option value="" selected disabled>Select empanada</option>
+          <option value="45">Regular Empanada</option>
+          <option value="65">Special Empanada</option>
+          <option value="100">Overload Empanada</option>
+        </select>
+
+        <input type="number" class="qty" min="1" value="1">
+      </div>
+
+      <div class="row-actions">
+        <button type="button" class="add-btn" id="addEmpanada">+ Add</button>
+        <button type="button" class="remove-btn" id="removeEmpanada">− Remove</button>
+      </div>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="order-box" id="drinkBox">
+      <h3>Drinks</h3>
+
+      <div class="order-row drink-row">
+        <select class="drink-select" required>
+          <option value="" selected disabled>Select drink</option>
+          <option value="20">Coke Mismo</option>
+          <option value="20">Royal Mismo</option>
+          <option value="20">Sprite Mismo</option>
+          <option value="20">Bottled Water</option>
+        </select>
+
+        <input type="number" class="qty" min="1" value="1">
+      </div>
+
+      <div class="row-actions">
+        <button type="button" class="add-btn" id="addDrink">+ Add</button>
+        <button type="button" class="remove-btn" id="removeDrink">− Remove</button>
+      </div>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="order-box">
+      <h3>Payment Method</h3>
+
+      <div class="payment-options">
+        <label>
+          <input type="radio" name="payment" value="Cash" required>
+          Cash
+        </label>
+
+        <label>
+          <input type="radio" name="payment" value="GCash">
+          GCash
+        </label>
+      </div>
+
+      <div id="gcashInfo" class="gcash-info" style="display:none;">
+        <p><strong>GCash Number:</strong> 09279000663</p>
+        <p><strong>Name:</strong> TRISHA Q.</p>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Place Order</button>
+
+  </form>
+</section>
+
+<script src="order.js"></script>
+</body>
+</html>
